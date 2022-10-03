@@ -242,6 +242,46 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            Container(
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.list_alt,
+                      color: Colors.white,
+                      size: 35,
+                    ),
+                  ),
+                  Text(
+                    "Order",
+                    style: whiteStyle.copyWith(fontSize: 10),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.account_balance_wallet,
+                      color: Colors.white,
+                      size: 35,
+                    ),
+                  ),
+                  Text(
+                    "Transaksi",
+                    style: whiteStyle.copyWith(fontSize: 10),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
