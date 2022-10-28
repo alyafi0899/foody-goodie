@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   int distance = 5;
+  bool warna = false;
 
   @override
   Widget build(BuildContext context) {
@@ -35,22 +36,28 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Color.fromARGB(255, 255, 200, 98),
           elevation: 0.0,
           actions: <Widget>[
-            Container(
-              padding: EdgeInsets.only(left: 20),
-              child: CircleAvatar(
-                backgroundImage: AssetImage('assets/food1.png'),
-                radius: 25,
+            InkWell(
+              child: Container(
+                padding: EdgeInsets.only(left: 20),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/profile.JPG'),
+                  radius: 30,
+                ),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, '/account');
+              },
             ),
             Container(
               padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: 230,
+                        width: 220,
                         child: Text(
                           'Welcome back',
                           style: whiteStyle.copyWith(
@@ -58,9 +65,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Container(
-                          width: 230,
+                          width: 220,
                           child: Text(
-                            'Al Yafi',
+                            'Shaumi',
                             style: whiteStyle.copyWith(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           )),
@@ -153,11 +160,11 @@ class _HomePageState extends State<HomePage> {
                     warna: true,
                   ),
                   LevelCategory(
-                    title: "favorite",
+                    title: "terlaris",
                     warna: false,
                   ),
                   LevelCategory(
-                    title: "favorite",
+                    title: "ga enak",
                     warna: false,
                   ),
                 ],

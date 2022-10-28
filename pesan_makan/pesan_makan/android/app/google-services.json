@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58991659318",
+    "project_id": "foody-goody-7255e",
+    "storage_bucket": "foody-goody-7255e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58991659318:android:728c4c0f10a73114944b97",
+        "android_client_info": {
+          "package_name": "com.example.pesan_makan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58991659318-gn1kn340uteb660e46o08201vf0l1qnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdOb35GE9fAtX3QVrTpoB-UsnyvA3MfOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58991659318-gn1kn340uteb660e46o08201vf0l1qnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
