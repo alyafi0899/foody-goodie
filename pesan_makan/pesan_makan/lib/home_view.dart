@@ -3,6 +3,7 @@ import 'package:pesan_makan/food_card.dart';
 import 'package:pesan_makan/lever_category_card.dart';
 import 'package:pesan_makan/main_menu_card.dart';
 import 'package:pesan_makan/theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -12,11 +13,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  SharedPreferences? preferences;
   TextEditingController? _cari;
+
   @override
   void initState() {
     _cari = TextEditingController();
     super.initState();
+    init();
+  }
+
+  Future init() async {
+    preferences = await SharedPreferences?.getInstance();
+    setState(() {});
   }
 
   @override
@@ -67,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                           width: 220,
                           child: Text(
-                            'Shaumi',
+                            "${preferences?.getString('nama')}",
                             style: whiteStyle.copyWith(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           )),
@@ -177,14 +186,14 @@ class _HomePageState extends State<HomePage> {
                       FoodCards(
                         food_dir: 'assets/food1.png',
                         title: "Telur ceplok",
-                        location: "Banda Aceh",
+                        location: "mhank udin ",
                         rating: "4.5",
                         prices: "4.500",
                       ),
                       FoodCards(
                         food_dir: 'assets/food2.png',
                         title: "Gado-gado",
-                        location: "Banda Aceh",
+                        location: "haji soleh ",
                         rating: "4.5",
                         prices: "10.00",
                       ),
@@ -229,65 +238,76 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.home,
-                      color: Colors.white,
-                      size: 35,
+            InkWell(
+              child: Container(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.home,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "Home",
-                    style: whiteStyle.copyWith(fontSize: 10),
-                  )
-                ],
+                    Text(
+                      "Home",
+                      style: whiteStyle.copyWith(fontSize: 10),
+                    )
+                  ],
+                ),
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.list_alt,
-                      color: Colors.white,
-                      size: 35,
+            InkWell(
+              child: Container(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.list_alt,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "Order",
-                    style: whiteStyle.copyWith(fontSize: 10),
-                  )
-                ],
+                    Text(
+                      "Order",
+                      style: whiteStyle.copyWith(fontSize: 10),
+                    )
+                  ],
+                ),
               ),
             ),
-            Container(
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.account_balance_wallet,
-                      color: Colors.white,
-                      size: 35,
+            InkWell(
+              child: Container(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/testing');
+                      },
+                      icon: Icon(
+                        Icons.account_balance_wallet,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text(
-                    "Transaksi",
-                    style: whiteStyle.copyWith(fontSize: 10),
-                  )
-                ],
+                    Text(
+                      "Transaksi",
+                      style: whiteStyle.copyWith(fontSize: 10),
+                    )
+                  ],
+                ),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, '/testing');
+              },
             ),
           ],
         ),

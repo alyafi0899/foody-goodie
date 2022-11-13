@@ -6,6 +6,7 @@ import 'package:pesan_makan/home_view.dart';
 import 'package:pesan_makan/loginPage/sign_up_page.dart';
 import 'package:pesan_makan/spalsh_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pesan_makan/list_coba/test_page.dart';
 import 'loginPage/sign_in_page.dart';
 
 Future main() async {
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
           '/signUp-page': (context) => SignUpPage(),
           '/main': (context) => MyHomePage(),
           '/account': (context) => AccountPage(),
+          '/testing': (context) => TestPage(),
         },
       ),
     );
