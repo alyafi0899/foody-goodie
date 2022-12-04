@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 padding: EdgeInsets.only(left: 20),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/profile.JPG'),
+                  backgroundImage: AssetImage('assets/food1.png'),
                   radius: 30,
                 ),
               ),
@@ -189,6 +189,7 @@ class _HomePageState extends State<HomePage> {
                         location: "mhank udin ",
                         rating: "4.5",
                         prices: "4.500",
+                        navigate: 'preorder',
                       ),
                       FoodCards(
                         food_dir: 'assets/food2.png',
@@ -196,6 +197,7 @@ class _HomePageState extends State<HomePage> {
                         location: "haji soleh ",
                         rating: "4.5",
                         prices: "10.00",
+                        navigate: 'preorder',
                       ),
                       FoodCards(
                         food_dir: 'assets/food1.png',
@@ -203,6 +205,7 @@ class _HomePageState extends State<HomePage> {
                         location: "Banda Aceh",
                         rating: "4.5",
                         prices: "4.500",
+                        navigate: 'preorder',
                       ),
                     ],
                   ),

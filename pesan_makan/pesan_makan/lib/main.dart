@@ -8,6 +8,7 @@ import 'package:pesan_makan/spalsh_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pesan_makan/list_coba/test_page.dart';
 import 'loginPage/sign_in_page.dart';
+import 'package:pesan_makan/pre_pesan.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           '/main': (context) => MyHomePage(),
           '/account': (context) => AccountPage(),
           '/testing': (context) => TestPage(),
+          '/preorder': (context) => PreOrder(),
         },
       ),
     );

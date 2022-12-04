@@ -48,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/background.png'),
+                image: AssetImage('assets/bg2.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -64,12 +64,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   margin: const EdgeInsets.only(bottom: 15),
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/logo_app.png'),
+                      image: AssetImage('assets/take_away.png'),
                     ),
                   ),
                 ),
                 Text(
-                  'Milesight',
+                  'Foody Goody',
                   style: GoogleFonts.aBeeZee(
                     fontSize: 40,
                     color: Colors.white,

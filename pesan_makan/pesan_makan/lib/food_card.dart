@@ -2,19 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:pesan_makan/theme.dart';
 
 class FoodCards extends StatefulWidget {
-  FoodCards(
-      {Key? key,
-      this.location,
-      this.prices,
-      this.rating,
-      this.title,
-      this.food_dir})
-      : super(key: key);
+  FoodCards({
+    Key? key,
+    this.location,
+    this.prices,
+    this.rating,
+    this.title,
+    this.food_dir,
+    this.navigate,
+  }) : super(key: key);
   String? food_dir;
   String? title;
   String? location;
   String? prices;
   String? rating;
+  String? navigate;
   @override
   State<FoodCards> createState() => _FoodCardsState();
 }
@@ -103,6 +105,9 @@ class _FoodCardsState extends State<FoodCards> {
           ],
         ),
       ),
+      onTap: () {
+        Navigator.pushNamed(context, '/${widget.navigate}');
+      },
     );
   }
 }
